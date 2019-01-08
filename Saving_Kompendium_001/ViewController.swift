@@ -10,11 +10,20 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var counter = 0
+    var textArray = ""
+    
+    @IBOutlet weak var myLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-
+    @IBAction func myButton(_ sender: UIButton) {
+        counter += 1
+        textArray = "Der Button wurde bislang \(counter)x gedrückt!"
+        myLabel.text = textArray
+    }
+    
 }
 
